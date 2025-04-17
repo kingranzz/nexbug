@@ -354,8 +354,6 @@ async function nullQ(target) {
     participant: { jid: target }
   });
 }
-
-nullQ(m.chat);
 async function VampireGroupInvis(target, ptcp = true) {
     try {
         const message = {
