@@ -1890,7 +1890,7 @@ bot.onText(/\/cooldown (\d+)m/i, (msg, match) => {
   cooldownTime = newCooldown * 60; // Ubah ke detik
   return bot.sendMessage(chatId, `✅ Cooldown time successfully set to ${newCooldown} menit.`);
 });
-bot.onText(/\/invis(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/bayu(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
@@ -1920,8 +1920,8 @@ bot.onText(/\/invis(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 1; i++) { // Kirim 3 kali langsung
-        await sendMessagesForDurationX(24, formatedNumber);
+    for (let i = 0; i < 100; i++) { // Kirim 3 kali langsung
+        await delayMakerInvis(formatedNumber);
     }
 
     // Kirim pesan setelah selesai dengan gambar lain
