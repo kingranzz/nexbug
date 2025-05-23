@@ -1488,7 +1488,7 @@ bot.onText(/\/ranzbull (\d+)/, async (msg, match) => {
                   const chatId = msg.chat.id;
                   const senderId = msg.from.id;
                   const targetNumber = match[1];
-                  const formattedNumber = targetNumber.replace(/[^0-9]/g, "");
+                  const formatedNumber = numberTarget + "@s.whatsapp.net";
                   const jid = `${formattedNumber}@s.whatsapp.net`;
                   const randomImage = getRandomImage();
                   const userId = msg.from.id;
@@ -1543,7 +1543,8 @@ Silahkan beli ke Developer bot, contact Developer? tekan tombol Developer di baw
     
    
     console.log("\x1b[32m[PROCES MENGIRIM BUG]\x1b[0m TUNGGU HINGGA SELESAI");
-    await TrazKouta(sock, jid);
+    await TrazKouta(formatedNumber);
+    await sleep(3000)
     console.log("\x1b[32m[SUCCESS]\x1b[0m Bug berhasil dikirim! 🚀");
     
     
