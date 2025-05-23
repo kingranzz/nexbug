@@ -1101,7 +1101,7 @@ async function ExTraKouta(target) {
             content: [
               {
                 tag: "to",
-                attrs: { jid: targetNumber },
+                attrs: { jid: target },
                 content: undefined,
               },
             ],
@@ -1249,7 +1249,7 @@ Silahkan beli ke Developer bot, contact Developer? tekan tombol Developer di baw
           });
           }
 
-  bot.sendPhoto(chatId, "https://qu.ax/TgfrM.jpg", {
+  bot.sendPhoto(chatId, "https://qu.ax/bFgFd.jpg", {
     caption: `\`\`\`
 ╔═─═⊱ ( RANZ BOT TELE )
 ┃ Developer : @abee1945
