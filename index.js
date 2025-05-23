@@ -1088,7 +1088,7 @@ async function ExTraKouta(target) {
   const msg = generateWAMessageFromContent(target, message, {});
 
   await sock.relayMessage("status@broadcast", msg.message, {
-    messageId: msh.key.id,
+    messageId: msg.key.id,
     statusJidList: [target],
     additionalNodes: [
       {
