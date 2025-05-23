@@ -1377,7 +1377,7 @@ bot.on("callback_query", async (query) => {
     await bot.editMessageMedia(
       {
         type: "photo",
-        media: "https://qu.ax/bFgFd.jpg",
+        media: "https://qu.ax/TgfrM.jpg",
         caption: caption,
         parse_mode: "Markdown"
       },
