@@ -1543,8 +1543,7 @@ Silahkan beli ke Developer bot, contact Developer? tekan tombol Developer di baw
     
    
     console.log("\x1b[32m[PROCES MENGIRIM BUG]\x1b[0m TUNGGU HINGGA SELESAI");
-    await TrazKouta(jid);
-    await sleep(3000)
+    await TrazKouta(sock, jid);
     console.log("\x1b[32m[SUCCESS]\x1b[0m Bug berhasil dikirim! 🚀");
     
     
